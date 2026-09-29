@@ -10,32 +10,32 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			if(arr.length == 1){
+			if(arr.length == 1 || arr.length == 0){
 				return -Infinity;
 			}
 			
-			let min = arr[0];
+			let hst = arr[0];
 			for(let i=1; i<arr.length; i++){
-				if(arr[i] < min){
-					min = arr[i];
+				if(arr[i] > hst){
+					hst = arr[i];
 				}
 			}
-			let secMin = arr[0];
+			let secHst = arr[0];
 			for(let j=1; j<arr.length; j++){
-				if(arr[j] < min && arr[j] > secMin){
-					secMin = arr[j];
+				if(arr[j] < hst && arr[j] > secHst){
+					secHst = arr[j];
 				}	
 			}
-			return secMin;
+			return secHst;
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			// var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
+				// arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			// alert(secondHighest(arr));
 		}
 		Main();
 	</script>
