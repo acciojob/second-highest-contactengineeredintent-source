@@ -13,6 +13,16 @@
 			if(arr.length == 1 || arr.length == 0){
 				return -Infinity;
 			}
+			let hasSameElement = true;
+			let elementCheck = arr[0];
+			for(let i=1; i<arr.length; i++){
+				if(arr[i] != elementCheck){
+					hasSameElement = false;
+				}
+			}
+			if(hasSameElement){
+				return -Infinity;
+			}
 			
 			let hst = arr[0];
 			for(let i=1; i<arr.length; i++){
